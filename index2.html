@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script type="text/javascript" src="lib/sencha-touch-debug.js"></script>
+    <link href="lib/resources/css/sencha-touch.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript">
+
+        Ext.application({
+
+            name:'TestSql',
+            requires:['Ext.device.sqlite.Sencha'],
+            requires:['Ext.MessageBox'],
+            requires:['Ext.device.Communicator'],
+            requires:['Ext.device.filesystem.Cordova'],
+
+            launch:function(){
+                //openDatabase({ name: 'koibhi', version:'1', displayName:'Sarim', estimatedSize:100, creationCallback:function(){alert("hie")}});
+                Ext.require('Ext.device.Communicator');
+                Ext.require('Ext.device.sqlite.Sencha');
+
+                //openDatabase('myDB','1','myDB',100,function(){alert("database created!")});
+                //Ext.device.sqlite.SQLTransaction(1).executeSql("CREATE TABLE `user`(`idkjas` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,`namekjas` TEXT);");
+                //Ext.Msg.alert("sarim");
+
+                //Ext.device.filesystem.Cordova.setFileSystemSize(100);
+                //Ext.device.sqlite.Database.create();
+
+                //Ext.device.sqlite.Sencha.create();
+
+                openDatabase(
+                    'test',
+                    '1',
+                    'test',
+                    100
+                    );
+
+            }
+
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>
